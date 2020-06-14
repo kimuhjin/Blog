@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 function Post1() {
   return (
     <Fragment>

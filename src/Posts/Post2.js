@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 function Post2() {
   return (
     <Fragment>
       <BodyContainer>
-        <div>222</div>
+        <div>post2</div>
       </BodyContainer>
     </Fragment>
   );

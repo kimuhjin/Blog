@@ -10,14 +10,11 @@ import Post2 from "./Posts/Post2";
 function App() {
   return (
     <Fragment>
-      <Header />
       <BrowserRouter>
-        <Switch>
-          <Route path="/Home" component={Home} />
-          <Route path="/Post1" component={Post1} />
-          <Route path="/Post2" component={Post2} />
-          <Redirect from="*" to="/Home" />
-        </Switch>
+        <Header />
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/Post1" component={Post1} />
+        <Route exact path="/Post2" component={Post2} />
       </BrowserRouter>
       <Footer />
     </Fragment>
