@@ -5,8 +5,8 @@ import HeroImage from "../Components/HeroImage";
 function Home() {
   const Posts = [
     {
-      Title: "첫 글",
-      Article: "첫 글입니다.",
+      Title: "[React] 커뮤니티 웹사이트 개발일지 #1 (Login)",
+      Article: "커뮤니티 웹사이트 개발일지 #1",
       Time: "6월 15일",
       Post: "Post1",
     },

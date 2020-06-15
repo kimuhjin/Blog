@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-
+function Image(props) {
+  return <img {...props} style={{ maxWidth: "100%" }} />;
+}
 function PostWrapper({ text, title, time }) {
   const Md = require("react-markdown");
 
@@ -9,9 +11,8 @@ function PostWrapper({ text, title, time }) {
       <BodyContainer>
         <Title>{title}</Title>
         <Time>{time}</Time>
-        <Hr />
         <Article>
-          <Md source={text} />
+          <Md source={text} renderers={{ image: Image }} />
         </Article>
       </BodyContainer>
     </Fragment>
@@ -19,7 +20,11 @@ function PostWrapper({ text, title, time }) {
 }
 
 export default PostWrapper;
+
 const Article = styled.div`
+  border: 1px solid lightgray;
+  border-left: 0px;
+  border-right: 0px;
   padding: 70px 0px;
 `;
 
