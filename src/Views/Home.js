@@ -29,7 +29,7 @@ function Home() {
     <Fragment>
       <BodyContainer>
         <PostsContainer>
-          <Category>게시물 ({Posts.length})</Category>
+          <Category>전체 게시물 ({Posts.length})</Category>
           {RanderPosts}
         </PostsContainer>
       </BodyContainer>
@@ -38,6 +38,7 @@ function Home() {
 }
 
 export default Home;
+
 const Category = styled.div`
   display: flex;
   justify-content: center;
@@ -84,8 +85,8 @@ const PostsContainer = styled.div`
   padding: 20px;
 `;
 const BodyContainer = styled.div`
-  margin-top: 100px;
-  padding: 0px 100px;
+  margin-top: 90px;
+  /* padding: 0px 100px; */
   /* border: 3px dashed red; */
   box-sizing: border-box;
   min-height: 1000px;
