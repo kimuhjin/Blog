@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import HeroImage from "../Components/HeroImage";
 function Home() {
   const Posts = [
     {
@@ -27,6 +28,7 @@ function Home() {
   });
   return (
     <Fragment>
+      <HeroImage />
       <BodyContainer>
         <PostsContainer>
           <Category>전체 게시물 ({Posts.length})</Category>
@@ -85,9 +87,12 @@ const PostsContainer = styled.div`
   padding: 20px;
 `;
 const BodyContainer = styled.div`
-  margin-top: 90px;
-  /* padding: 0px 100px; */
-  /* border: 3px dashed red; */
-  box-sizing: border-box;
-  min-height: 1000px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `;

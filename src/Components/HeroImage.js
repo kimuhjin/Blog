@@ -16,6 +16,9 @@ export default HeroImage;
 const Title = styled.div`
   font-family: "Orbitron", sans-serif;
   font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 const LinkButton = styled.div`
   cursor: pointer;
@@ -32,6 +35,10 @@ const LinkButton = styled.div`
   &:hover {
     opacity: 1;
   }
+  @media (max-width: 768px) {
+    width: 130px;
+    height: 50px;
+  }
 `;
 
 const Image = styled.div`
@@ -44,4 +51,8 @@ const Image = styled.div`
   background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2013&q=80");
   background-repeat: no-repeat;
   background-size: 100% 500px;
+  @media (max-width: 768px) {
+    height: 300px;
+    background-size: 100% 300px;
+  }
 `;

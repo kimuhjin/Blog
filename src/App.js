@@ -3,7 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Views/Header";
-import HeroImage from "./Components/HeroImage";
+
 import Home from "./Views/Home";
 import Footer from "./Views/Footer";
 import Post1 from "./Posts/Post1";
@@ -14,14 +14,10 @@ function App() {
     <Fragment>
       <HashRouter>
         <Header />
-        <HeroImage />
-        <PageContainer>
-          <PageBox>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/Post1" component={Post1} />
-            <Route exact path="/Post2" component={Post2} />
-          </PageBox>
-        </PageContainer>
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Post1" component={Post1} />
+        <Route exact path="/Post2" component={Post2} />
       </HashRouter>
       <Footer />
     </Fragment>
@@ -30,7 +26,6 @@ function App() {
 
 export default App;
 
-const PageBox = styled.div``;
 const PageContainer = styled.div`
   max-width: 1300px;
   margin-left: auto;

@@ -24,6 +24,8 @@ const HeaderBox = styled.div`
   align-items: center;
   width: 1200px;
   height: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
 `;
 const Title = styled(Link)`
   font-size: 24px;
@@ -37,6 +39,7 @@ const HeaderContainer = styled.div`
   position: fixed;
   display: flex;
   top: 0;
+  z-index: 9999;
   justify-content: center;
   align-items: center;
   height: 80px;
