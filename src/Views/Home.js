@@ -16,6 +16,12 @@ function Home() {
       Time: "6월 15일",
       Post: "Post2",
     },
+    {
+      Title: "세번째 글",
+      Article: "세번째 글입니다.",
+      Time: "6월 15일",
+      Post: "Post3",
+    },
   ];
   const RanderPosts = Posts.map((data) => {
     return (

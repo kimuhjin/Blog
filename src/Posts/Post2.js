@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import PostWrapper from "./PostWrapper";
+import React from "react";
 
 function Post2() {
-  const Md = require("react-markdown");
+  const title = "두번째 글";
+  const time = "2020.06.15";
   const text = `
   마크다운 markdown 작성법
 
@@ -28,48 +29,7 @@ function Post2() {
   
   ****
   `;
-  return (
-    <Fragment>
-      <BodyContainer>
-        <Title>두번째 글 </Title>
-        <Time>2020.06.15</Time>
-        <Hr />
-        <Article>
-          <Md source={text} />
-        </Article>
-      </BodyContainer>
-    </Fragment>
-  );
+  return <PostWrapper text={text} title={title} time={time} />;
 }
 
 export default Post2;
-const Article = styled.div`
-  padding: 70px 0px;
-`;
-
-const Hr = styled.div`
-  border-top: 1px solid lightgray;
-`;
-const Title = styled.div`
-  font-size: 30px;
-  margin-bottom: 10px;
-`;
-const Time = styled.div`
-  font-size: 14px;
-  color: gray;
-  margin-bottom: 10px;
-`;
-
-const BodyContainer = styled.div`
-  padding: 100px 0;
-  margin-top: 80px;
-  max-width: 1000px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  @media (max-width: 768px) {
-    max-width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-`;

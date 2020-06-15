@@ -1,7 +1,7 @@
 import PostWrapper from "./PostWrapper";
 import React from "react";
 
-function PostSample() {
+function Post3() {
   const title = "세번째 글";
   const time = "2020.06.15";
   const text = `
@@ -10,4 +10,4 @@ function PostSample() {
   return <PostWrapper text={text} title={title} time={time} />;
 }
 
-export default PostSample;
+export default Post3;
