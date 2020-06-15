@@ -9,7 +9,9 @@ function Header() {
       <HeaderContainer>
         <HeaderBox>
           <Title to="/">Blog</Title>
-          <FiMenu size={36} />
+          <Menu>
+            <FiMenu size={36} />
+          </Menu>
         </HeaderBox>
       </HeaderContainer>
     </Fragment>
@@ -17,6 +19,9 @@ function Header() {
 }
 
 export default Header;
+const Menu = styled.div`
+  cursor: pointer;
+`;
 
 const HeaderBox = styled.div`
   display: flex;

@@ -1,11 +1,24 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
+
 function HeroImage() {
   return (
     <Fragment>
       <Image>
         <LinkButton>
+          <Link href="https://github.com/kimuhjin">
+            <AiFillGithub size={40} />
+          </Link>
+        </LinkButton>
+        <LinkButton>
           <Title>Portfolios</Title>
+        </LinkButton>
+        <LinkButton>
+          <Link href="https://www.instagram.com/kimuhjin__/">
+            <AiFillInstagram size={40} />
+          </Link>
         </LinkButton>
       </Image>
     </Fragment>
@@ -13,6 +26,15 @@ function HeroImage() {
 }
 
 export default HeroImage;
+const Link = styled.a`
+  cursor: pointer;
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+`;
 const Title = styled.div`
   font-family: "Orbitron", sans-serif;
   font-size: 20px;
@@ -32,6 +54,7 @@ const LinkButton = styled.div`
   border: 1px solid white;
   border-radius: 10px;
   transition: opacity 0.6s ease;
+  margin: 0px 10px;
   &:hover {
     opacity: 1;
   }

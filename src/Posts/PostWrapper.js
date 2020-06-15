@@ -3,6 +3,7 @@ import styled from "styled-components";
 function Image(props) {
   return <img {...props} style={{ maxWidth: "100%" }} />;
 }
+
 function PostWrapper({ text, title, time }) {
   const Md = require("react-markdown");
 
@@ -26,6 +27,7 @@ const Article = styled.div`
   border-left: 0px;
   border-right: 0px;
   padding: 70px 0px;
+  overflow: scroll;
 `;
 
 const Hr = styled.div`
@@ -42,7 +44,7 @@ const Time = styled.div`
 `;
 
 const BodyContainer = styled.div`
-  padding: 100px 0;
+  padding: 100px 10px;
   margin-top: 80px;
   max-width: 1000px;
   height: 100%;
