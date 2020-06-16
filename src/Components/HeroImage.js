@@ -44,6 +44,9 @@ const Title = styled.div`
   @media (max-width: 768px) {
     font-size: 16px;
   }
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
 const SnsButton = styled.a`
   cursor: pointer;

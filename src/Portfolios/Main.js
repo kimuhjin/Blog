@@ -17,8 +17,6 @@ function Main() {
             <Title>Full-Stack</Title>
             <WorkBox>
               <Work />
-              <Work />
-              <Work />
             </WorkBox>
           </WorkContainer>
         </PortBox>
@@ -28,14 +26,18 @@ function Main() {
 }
 
 export default Main;
+
 const Work = styled.div`
   cursor: pointer;
   margin: 30px 30px;
+  /* margin: 0 auto; */
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  /* border: 1px solid black; */
+  box-shadow: 1px 1px 10px 1px lightgray;
+  border-radius: 10px;
   box-sizing: border-box;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   margin-bottom: 50px;
   transition: transform 0.5s;
   -webkit-transform: translate3d(0, 0, 0);
@@ -43,17 +45,27 @@ const Work = styled.div`
   &:hover {
     transform: perspective(600px) rotateY(30deg);
   }
+  @media (max-width: 560px) {
+    margin: 30px auto;
+  }
 `;
 const WorkBox = styled.div`
   display: flex;
   /* align-items: flex-start; */
+  /* justify-content: center; */
   flex-wrap: wrap;
+  align-content: flex-start;
   border: 2px solid green;
   box-sizing: border-box;
   margin-bottom: 30px;
-  /* @media (max-width: 764px) {
+  /* width: 100%;
+  margin-left: auto;
+  margin-right: auto; */
+  @media (max-width: 560px) {
+    flex-wrap: nowrap;
     flex-direction: column;
-  } */
+    align-content: center;
+  }
 `;
 
 const Title = styled.div`
@@ -76,6 +88,9 @@ const PortBox = styled.div`
   padding: 50px 50px;
   border: 3px solid blue;
   box-sizing: border-box;
+  @media (max-width: 764px) {
+    padding: 50px 0px;
+  }
 `;
 const PortContainer = styled.div`
   display: flex;
