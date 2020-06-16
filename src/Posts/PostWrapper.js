@@ -3,7 +3,20 @@ import styled from "styled-components";
 function Image(props) {
   return <img {...props} style={{ maxWidth: "100%" }} />;
 }
-
+function CodeBlock(props) {
+  return (
+    <pre
+      style={{
+        background: "#000",
+        color: "#fff",
+        padding: 10,
+        borderRadius: 10,
+      }}
+    >
+      <code>{props.value}</code>
+    </pre>
+  );
+}
 function PostWrapper({ text, title, time }) {
   const Md = require("react-markdown");
 
@@ -13,7 +26,7 @@ function PostWrapper({ text, title, time }) {
         <Title>{title}</Title>
         <Time>{time}</Time>
         <Article>
-          <Md source={text} renderers={{ image: Image }} />
+          <Md source={text} renderers={{ image: Image, code: CodeBlock }} />
         </Article>
       </BodyContainer>
     </Fragment>
@@ -45,7 +58,6 @@ const Time = styled.div`
 
 const BodyContainer = styled.div`
   padding: 100px 10px;
-  margin-top: 80px;
   max-width: 1000px;
   height: 100%;
   margin-left: auto;

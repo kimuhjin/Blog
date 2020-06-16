@@ -6,13 +6,17 @@ import Header from "./Views/Header";
 import PostsRender from "./Posts/PostsRender";
 import Home from "./Views/Home";
 import Footer from "./Views/Footer";
+import Portfolios from "./Portfolios/Main";
 
 function App() {
   return (
     <Fragment>
       <HashRouter>
         <Header />
-        <Route exact path="/" component={Home} />
+        <PageContainer>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Portfolios" component={Portfolios} />
+        </PageContainer>
         <PostsRender />
       </HashRouter>
       <Footer />
@@ -23,12 +27,5 @@ function App() {
 export default App;
 
 const PageContainer = styled.div`
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  @media (max-width: 768px) {
-    max-width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+  margin-top: 80px;
 `;

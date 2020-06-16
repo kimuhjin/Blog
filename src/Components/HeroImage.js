@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -7,26 +8,26 @@ function HeroImage() {
   return (
     <Fragment>
       <Image>
-        <LinkButton>
-          <Link href="https://github.com/kimuhjin">
+        <SnsButton href="https://github.com/kimuhjin">
+          <LinkTo href="https://github.com/kimuhjin">
             <AiFillGithub size={40} />
-          </Link>
-        </LinkButton>
-        <LinkButton>
+          </LinkTo>
+        </SnsButton>
+        <LinkButton to="/Portfolios">
           <Title>Portfolios</Title>
         </LinkButton>
-        <LinkButton>
-          <Link href="https://www.instagram.com/kimuhjin__/">
+        <SnsButton href="https://github.com/kimuhjin">
+          <LinkTo href="https://www.instagram.com/kimuhjin__/">
             <AiFillInstagram size={40} />
-          </Link>
-        </LinkButton>
+          </LinkTo>
+        </SnsButton>
       </Image>
     </Fragment>
   );
 }
 
 export default HeroImage;
-const Link = styled.a`
+const LinkTo = styled.a`
   cursor: pointer;
   &:link {
     color: black;
@@ -38,12 +39,36 @@ const Link = styled.a`
 const Title = styled.div`
   font-family: "Orbitron", sans-serif;
   font-size: 20px;
+  color: black;
+  text-decoration: none;
   @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
-const LinkButton = styled.div`
+const SnsButton = styled.a`
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 70px;
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: opacity 0.6s ease;
+  margin: 0px 10px;
+  &:hover {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    width: 130px;
+    height: 50px;
+  }
+`;
+const LinkButton = styled(Link)`
+  cursor: pointer;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
